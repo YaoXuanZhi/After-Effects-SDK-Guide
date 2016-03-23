@@ -1,2 +1,2 @@
-# YXZPlug-ins-for-AE
-It just is a trace of learning Plug-Ins for AE
+﻿# YXZPlug-ins-for-AE
+这里是我学习AE插件开发的点点滴滴。
