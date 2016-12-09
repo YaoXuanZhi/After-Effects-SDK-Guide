@@ -10,11 +10,11 @@
 ***
 ### *没图你说个JB[no pictue no talk]：*
 <div  align="center">    
-<img src="assets/003/001-a16c319b.png" width = "800" alt="AE插件和AE脚本的放置目录区别" align=center />
+<img src="assets/001/001-a16c319b.png" width = "800" alt="AE插件和AE脚本的放置目录区别" align=center />
 </div>
 <div  align="center">    
-<img src="assets/003/001-e0835ce2.png" width = "800" alt="AE插件和AE脚本的调用区别" align=center />
+<img src="assets/001/001-e0835ce2.png" width = "800" alt="AE插件和AE脚本的调用区别" align=center />
 </div>
 <div  align="center">    
-<img src="assets/003/001-a75a7363.png" width = "800" alt="开发者编写AE插件和AE脚本的工具区别" align=center />
+<img src="assets/001/001-a75a7363.png" width = "800" alt="开发者编写AE插件和AE脚本的工具区别" align=center />
 </div>
