@@ -1,4 +1,4 @@
-﻿# YXZPlug-ins-for-AE
+﻿# 项目说明
 本项目主要是收集了各个版本的After Effects SDK，并对次SDK进行翻译等工作等。
 
 ##以什么形式来提供内容呢？
