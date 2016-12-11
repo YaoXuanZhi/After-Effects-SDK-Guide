@@ -13,7 +13,7 @@ In the interest of cross-platform compatibility, use a single .r file for both M
 ### Entry Point
 
 &#160;&#160;&#160;&#160;&#160;&#160;
-Your plug-in’s entry point is exported through the PiPL on Windows and Mac OS. If the plug-in supports multiple platforms (e.g. 32-bit Windows and Intel Macs), then multiple entry points must be defined in the PiPL. There is no need for a Windows .def file or manual exports, unless you’re also designating some other OS-specific entry point. The macros defined in *entry.h* (in the *\SDK\Examples\Headers directory*) take care of exporting each sample’s entry point function. XCode seems overly concerned about the prospect of a *main()* function returning a long; all the sample projects’ entry point functions have been changed to the seemingly innocuous *EntryPointFunc()*.
+Your plug-in’s entry point is exported through the PiPL on Windows and Mac OS. If the plug-in supports multiple platforms (e.g. 32-bit Windows and Intel Macs), then multiple entry points must be defined in the PiPL. There is no need for a Windows .def file or manual exports, unless you’re also designating some other OS-specific entry point. The macros defined in `entry.h` (in the `\SDK\Examples\Headers directory`) take care of exporting each sample’s entry point function. XCode seems overly concerned about the prospect of a `main()` function returning a long; all the sample projects’ entry point functions have been changed to the seemingly innocuous `EntryPointFunc()`.
 
 ### PiPL resources and mMicrosoft Visual Studio
 
