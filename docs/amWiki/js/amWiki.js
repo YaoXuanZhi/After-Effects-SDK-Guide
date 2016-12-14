@@ -33,14 +33,25 @@ $(function () {
      */
 
     //页面元素
-    var $menuBar = $('#menuBar'),
+    var $win = $(window),
+        $menuBar = $('#menuBar'),
         $mainSibling = $('#mainSibling'),
         $nav = $('.nav'),
         $menuIcon = $('.menu_icon'),
         $filter = $('#menuFilter'),
         $filterClean = $filter.next('i'),
-        $contents = $('#contents'),
-        $contentsList = $contents.children('.contents-list');
+        $contents = $('#contents');
+
+    //是否为移动端
+    var isMobi = (function () {
+        var winW = $win.width();
+        $win.on('resize', function () {
+            winW = $win.width();
+        });
+        return function () {
+            return winW <= 720;
+        };
+    })();
 
     //页面基本显示与操作
     (function () {
@@ -147,12 +158,22 @@ $(function () {
         $contents.children('.btn').on('click', function (e) {
             $contents.toggleClass('on').removeClass('hover');
         });
-        $contents.hover(function(){
+        $contents.hover(function () {
             $contents.addClass('hover');
-        },function(){
+        }, function () {
             $contents.removeClass('hover');
         });
-
+        //全局点击
+        $(document).on('click', function (e) {
+            var $tag = $(e.target);
+            //移动端
+            if (isMobi()) {
+                //折叠目录悬浮窗
+                if ($tag.closest('#contents').length == 0) {
+                    $contents.removeClass('on').removeClass('on');
+                }
+            }
+        });
     })();
 
     /*
@@ -232,15 +253,16 @@ $(function () {
         var localDoc = storage.read(path);
         docs.renderDoc(localDoc);
         testing && testing.crawlContent();
+        $win.scrollTop(0);  //返回顶部
         //更新history记录
         if (!withOutPushState && HISTORY_STATE) {
             history.pushState({path: path}, '', '?file=' + path);
         }
         //第二步，加载服务器上的文档资源，如果有更新重新渲染
         docs.loadPage(path, function (state, content) {
-            //读取服务器文档失败
+            //读取服务器文档失败时
             if (state == 'error') {
-                //如果本地缓存为空，且服务器文档读取失败，跳回首页
+                //如果本地缓存为空，且服务器文档读取失败时，跳回首页
                 if (localDoc == '') {
                     docs.loadPage('首页', function (state, content) {
                         if (state == 'success') {
@@ -252,13 +274,13 @@ $(function () {
                         history.replaceState({path: '首页'}, '', '?file=首页');
                     }
                 }
-                //如果本地缓存不为空，但服务器文档读取失败
+                //如果本地缓存不为空，但服务器文档读取失败时
                 else {
                     //记录文档打开数
                     storage.increaseOpenedCount(path);
                 }
             }
-            //读取服务器文档成功
+            //读取服务器文档成功时
             else if (state == 'success') {
                 //如果服务器文档有更新，更新本地缓存、重新渲染页面、重新判断接口测试
                 if (content != localDoc) {
@@ -333,7 +355,7 @@ $(function () {
 
     //history api 浏览器前进后退操作响应
     if (HISTORY_STATE) {
-        $(window).on('popstate', function (e) {
+        $win.on('popstate', function (e) {
             var path;
             //当有状态记录时，直接跳转
             if (e.originalEvent.state) {
