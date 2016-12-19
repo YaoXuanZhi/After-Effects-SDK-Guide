@@ -49,3 +49,12 @@ You don’t; After Effects does. If you follow our advice and base your projects
 
 <br>
 &#160;&#160;&#160;&#160;&#160;&#160;
+此物起源于十年前的PS，主要提供了`插件属性列表[Plug-In Property Lists]`、`PiPLs`等作为资源，这些资源包含了插件在没有被执行的时候的行为的基本信息。`PiPLs`已经在`After Effects`中被`PF_Cmd_GLOBAL_SETUP`和`dynamic outflags`大量取代。然而，由于历史缘故，`PF_Cmd_GLOBAL_SETUP`中指示的行为必须与`PiPL`中的行为一致。
+
+一个PiPL指定插件的入口点和其匹配名称。这个匹配名称是在插件插件之中时唯一的，相当于身份证的作用（实质上是插件在AE中的内部名称），与在AE中显示的可改变的名称不同。
+
+为了兼容跨平台的特性，在插件的Mac OS和Windows版本中使用.r文件来生成对应平台的PiPL资源。PiPL属性在Mac OS下比如按照特地ingde字节顺序。在Windows下，PiPLs则通过pipltool.exe编译.r文件所得。在Windows下的样例工程全部包含了生成所需的.rc文件的`自定义生成步骤[custom build steps]`，通过此命令可以根据.r文件生成对应的.rc文件，另外还有cnvtpipl.exe命令行工具。基于你目前正在依赖的已经存在的样例插件和`生成步骤[build step]`将可以完成正确的插件构建流程。
+
+### 入口点
+
+&#160;&#160;&#160;&#160;&#160;&#160;
