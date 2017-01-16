@@ -19,3 +19,13 @@
    - [异常](?file=001-第一章：介绍/015-异常 "异常")
    - [本地化](?file=001-第一章：介绍/016-本地化 "本地化")
    - [下一步](?file=001-第一章：介绍/017-下一步 "下一步")
+
+##### 第二章：特效插件基础
+   - [入口点](?file=002-第二章：特效插件基础/001-入口点 "入口点")
+   - [命令选择器们](?file=002-第二章：特效插件基础/002-命令选择器们 "命令选择器们")
+   - [PF_InData](?file=002-第二章：特效插件基础/003-PF_InData "PF_InData")
+   - [PF_OutData](?file=002-第二章：特效插件基础/004-PF_OutData "PF_OutData")
+   - [Parameters](?file=002-第二章：特效插件基础/005-Parameters "Parameters")
+   - [PF_ParamDef](?file=002-第二章：特效插件基础/006-PF_ParamDef "PF_ParamDef")
+   - [PF_EffectWorld Or PF_LayerDef](?file=002-第二章：特效插件基础/007-PF_EffectWorld Or PF_LayerDef "PF_EffectWorld Or PF_LayerDef")
+   - [Errors](?file=002-第二章：特效插件基础/008-Errors "Errors")
