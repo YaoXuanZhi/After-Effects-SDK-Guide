@@ -23,6 +23,19 @@ https://yaoxuanzhi.github.io/After-Effects-SDK-Guide/ 。内容通常是中文�
 ###在Atom中安装amWiki插件
 建议直接参照amWiki作者的原项目的使用教程，[点我](https://github.com/TevinLi/amWiki)。
 
+###在VSCode中安装amWiki插件
+这里面是我直接将Atom中的amWiki插件的移植项目，目前基本功能已经可以在VSCode中正常使用了。详细使用教程，[点我](https://github.com/YaoXuanZhi/amWikiForVSCode)。安装指南如下所示：
+
+1. 下载amWiki的VSCode移植版
+
+![image](https://cloud.githubusercontent.com/assets/14124918/22090378/346d2f64-de2c-11e6-9d54-17bd5b08ed0a.png)
+
+![image](https://cloud.githubusercontent.com/assets/14124918/22090471/c5b855c0-de2c-11e6-9c04-edfd5031b546.png)
+
+2. 直接将此移植版的目录拷贝到VSCode的插件安装目录，重启VSCode即可正常使用
+
+![image](https://cloud.githubusercontent.com/assets/14124918/22090431/7b41c328-de2c-11e6-9711-2831e21f44a1.png)
+
 ##感谢
 感谢TevinLi大大开发的amWiki，amWiki为我们的编辑工作搭建了最初的目录结构，并且帮助我们自动管理各个页面关系，让我们可以专心
 投入到文档编辑的工作中，衷心感谢！
