@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "file": "${workspaceRoot}/index.html",
+            "webRoot": "${workspaceRoot}",
+            "runtimeExecutable": "D:\\旗鱼浏览器\\qiyu\\qiyu.exe",
+            "windows": {
+                "runtimeArgs": [
+                    "--remote-debugging-port=5171",
+                    "--enable-file-cookies",
+                    "--allow-file-access-from-files"
+                ]
+            },
+            "sourceMaps": true,
+            "port": 5171
+        },
+        {
+            "type": "chrome",
+            "request": "attach",
+            "name": "Attach to Chrome",
+            "port": 5171,
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}"
+        }
+    ]
+}
