@@ -283,8 +283,7 @@ $(function () {
         $main.children('.main-inner').scrollTop(0);  //返回顶部
         //更新history记录
         if (!withOutPushState && HISTORY_STATE) {
-            //注释掉此行，因为这里抛出了异常“sourceRequest error:illegal handle”
-            // history.pushState({path: path}, '', '?file=' + path);
+            history.pushState({path: path}, '', '?file=' + path);
         }
         //第二步，加载服务器上的文档资源，如果有更新重新渲染
         docs.loadPage(path, function (state, content) {
