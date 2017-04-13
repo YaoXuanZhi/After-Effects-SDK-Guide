@@ -8,7 +8,7 @@
 `Adobe ExtendScript` 是基于 `EMCA标准`，为Adobe产品专门定制过的JavaScript，注意，这个被Adobe定制后的JavaScript和Web里的JavaScript还是有相当大的区别滴，不过不用纠结它们之间的语法差异，因为它们是一样的。(￣︶￣)↗
 
 ***
-### *没图你说个JB[no pictue no talk]：*
+### *no pictue no talk:*
 <div  align="center">    
 <img src="assets/001/001-a16c319b.png" width = "800" alt="AE插件和AE脚本的放置目录区别" align=center />
 </div>
